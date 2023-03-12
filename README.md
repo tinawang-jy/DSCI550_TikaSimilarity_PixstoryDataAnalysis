@@ -1,13 +1,14 @@
 # DSCI550_TikaSimilarity_PixstoryDataAnalysis
 This repository is designed as a collaborate workspace for DSCI550_SP23_team6. 
+Thanks for the instruction from Professor Chris Mattmann and TA Suchith Prathapaneni.
 
 # Introduction
 
 * Research Topic: 
-	
+This is a real analysis exercise on the Newest Social Media Dataset in Pixstory platform. Our group adds 7 types of features to this dataset: sports events, festival lists, hate tags, sarcasm, billboard top songs, best book,and country. Then we use Tika to conduct similarity analysis and visualize the results.	
 
 # Installation
-
+Please use requirements.txt to install and import required packages.
 ```
 pip install -r requirements.txt
 ```
@@ -49,23 +50,34 @@ How to Run Code:
 
 ### Pixstory Data
 
-#### Joining Fearures
+#### Joining Required Fearures
+Please run all cells in the 
 
 >1. Sport Events
+parse from the link https://www.topendsports.com/events/games/list.htm and then use  re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
 
 >2. Film Festivals
+parse from the 3 links: https://www.film-festreport.com/home/film-festivals-2022, https://www.screendaily.com/news/2021-film-festivals-and-markets-latest-dates-postponements-and-cancellations/5155284.article , https://www.screendaily.com/news/2020-film-festivals-and-markets-latest-dates-postponements-and-cancellations/5155284.article.
+Then use  re.package to standardized the date of the start day of the festival, end day of the festival,  use date.time to compare the date range of the different types of the festival date with the Account Created Date. If the Account Created Date fits in the date range, then the festival features (festival name, start day, end day) will be added.
 
 >3. Hate Speech Flag
+Add a flag for hate speech detected from Glaad and ADL https://www.adl.org/resources/hate-symbols/search in order to get the hate label. Define a function checkString to check wheather there are English characters and digits in narrative and title. Then assign hate speech label based on title and narrative.
 
 >4. Scra Flg
+Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and define the function clean_text to standardized the flag. Then count vectorizer and assign the flags based on title, narrative and text.
+
 
 ## Addtional Dataset from Different MIME Top-Level
+3 MIME Top-Level are shapefile,  Text/ HTML and Application/ JSON. Please run all blocks in the 
 
 >1. Shapefile -- Esri Worldwise country boundry 
+External shapefiles datasets are in path "data/6-1_World_Countries/World_Countries.shp" and "data/6-1_World_Countries_(Generalized)/World_Countries__Generalized_.shp". Use geopandas package and Make sure you have all necessary files (not just shp!). Assign country for post that mentioned country in the title or narrative. 3 new features are : Country,CONTINENT,geometry(which means detailed location based on the geomap)
 
 >2. HTML -- BillBoard 100 Year Top Music for 2020, 2021, and 2022
+Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/hot-100-songs/ then store into list. Match the dataset narrative column to see whether they mention the singer to add new features. 3 new features are:
 
->3. Image -- North American Movie Ranking for 2020, 2021, and 2022
+>3. Application/ JSON --  Best book recommendation for 2020, 2021, and 2022
+Import JSON package to parse the “data/books.json” and match them based on the new feature country which is added by 6.1 shapefile dataset. 3 new features are: 
 
 
 # Assignment 1: Data Aggragation, Tika Similarity Test and Clustering 
