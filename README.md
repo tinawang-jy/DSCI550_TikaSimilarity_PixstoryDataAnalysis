@@ -54,7 +54,7 @@ How to Run Code:
 Please run all cells in the 
 
 >1. Sport Events
-parse from the link https://www.topendsports.com/events/games/list.htm and then use  re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
+parse from the link https://www.topendsports.com/events/games/list.htm and then use re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
 
 >2. Film Festivals
 parse from the 3 links: https://www.film-festreport.com/home/film-festivals-2022, https://www.screendaily.com/news/2021-film-festivals-and-markets-latest-dates-postponements-and-cancellations/5155284.article , https://www.screendaily.com/news/2020-film-festivals-and-markets-latest-dates-postponements-and-cancellations/5155284.article.
@@ -67,7 +67,7 @@ Add a flag for hate speech detected from Glaad and ADL https://www.adl.org/resou
 Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and define the function clean_text to standardized the flag. Then count vectorizer and assign the flags based on title, narrative and text.
 
 
-## Addtional Dataset from Different MIME Top-Level
+## Addtional Dataset from Different MIME Top-Level [Data Aggregation]
 3 MIME Top-Level are shapefile,  Text/ HTML and Application/ JSON. Please run all blocks in the 
 
 >1. Shapefile -- Esri Worldwise country boundry 
@@ -76,9 +76,9 @@ External shapefiles datasets are in path "data/6-1_World_Countries/World_Countri
 >2. HTML -- BillBoard 100 Year Top Music for 2020, 2021, and 2022
 Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/hot-100-songs/ then store into list. Match the dataset narrative column to see whether they mention the song to add new features. 3 new features are : song title, singer, rank
 
->3. Application/ JSON --  Best book recommendation for 2020, 2021, and 2022
-Import JSON package to parse the “data/books.json” and match them based on the new feature country which is added by 6.1 shapefile dataset. 3 new features are : 
-author, imagelink, title
+>3. Image --  TOP 20 boxoffice for 2020, 2021, and 2022
+Picking up the top 20 most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 3 new features are : rank, year, release 
 
-# Assignment 1: Data Aggragation, Tika Similarity Test and Clustering 
-
+# Assignment 1: Data Aggragation, Tika Similarity Test and Clustering D
+>1. Data Aggregation : Once all of our external data had been added to our table (including our MIME types), we had to combine all of our work. We sourced all of our work together into a shared folder, and then created a universal folder structure for our files and code. Any external sources were placed into a folder titled ‘data’, while the pixstory data for the assignment (as well as the .py file), was left in the main directory. This was done for simplicity of terminal commands being run to combine our .xlsx files into a single .tsv.
+>2. Tika Similarity Test
