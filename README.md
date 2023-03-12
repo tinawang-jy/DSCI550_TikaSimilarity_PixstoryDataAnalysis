@@ -74,11 +74,11 @@ Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and defin
 External shapefiles datasets are in path "data/6-1_World_Countries/World_Countries.shp" and "data/6-1_World_Countries_(Generalized)/World_Countries__Generalized_.shp". Use geopandas package and Make sure you have all necessary files (not just shp!). Assign country for post that mentioned country in the title or narrative. 3 new features are : Country,CONTINENT,geometry(which means detailed location based on the geomap)
 
 >2. HTML -- BillBoard 100 Year Top Music for 2020, 2021, and 2022
-Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/hot-100-songs/ then store into list. Match the dataset narrative column to see whether they mention the singer to add new features. 3 new features are:
+Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/hot-100-songs/ then store into list. Match the dataset narrative column to see whether they mention the singer to add new features. 5 new features are: Song(indicate whether a song was mentioned in a given post), song title, singer, rank, year
 
 >3. Application/ JSON --  Best book recommendation for 2020, 2021, and 2022
-Import JSON package to parse the “data/books.json” and match them based on the new feature country which is added by 6.1 shapefile dataset. 3 new features are: 
-
+Import JSON package to parse the “data/books.json” and match them based on the new feature country which is added by 6.1 shapefile dataset. 4 new features are: 
+author, country, imagelink, title
 
 # Assignment 1: Data Aggragation, Tika Similarity Test and Clustering 
 
