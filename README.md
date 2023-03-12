@@ -22,8 +22,8 @@ How to Run Code:
 >1. beautifulsoup      - 4.11.1
 >2. csvkit             - 1.1.0
 >3. geopandas          - 0.12.2
->4. glob2              - 0.7
->5. json5              - 0.9.6
+>4. glob               - 2.0.7
+>5. json               - 0.9.6
 >6. matplotlib         - 3.5.1
 >7. nltk               - 3.7
 >8. numpy              - 1.21.5
@@ -68,5 +68,5 @@ How to Run Code:
 >3. Image -- North American Movie Ranking for 2020, 2021, and 2022
 
 
-# Data Aggragation and Tika Similarity Test and Clustering (Assignment 1)
+# Assignment 1: Data Aggragation, Tika Similarity Test and Clustering 
 
