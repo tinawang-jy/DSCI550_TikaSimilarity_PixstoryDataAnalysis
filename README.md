@@ -110,7 +110,7 @@ If you want to compute Jaccard similarity, you should run the code below.
 
 > Jaccard similarity
 ``` 
-$ 
+$ python jaccard_similarity.py --inputDir /path/to/files —outCSV /path/to/output.csv
 ```
 > edit-distance
 ```
@@ -123,15 +123,19 @@ $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept
 
 >c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
 
-
-3. Package data up by combining all of your new JSONs with additional features into a single TSV
-
+Generate d3 circle
+```
+$ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
+```
+```
+Generate d3 LevelClusters
+```
+$ python generateLevelCluster.py
+```
 
 # Assignment2 : Add some new D3.js visualizations to Tika Similarity
-Add some new D3.js visualizations to Tika Similarity. Our team made circlepack, treemap, 
-```
-$ python processing.py
-```
+Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap 
+
 # About
 This is the assignment 1 from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
 
