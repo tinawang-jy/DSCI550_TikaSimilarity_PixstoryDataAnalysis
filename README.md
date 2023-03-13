@@ -2,7 +2,7 @@
 
 # Introduction
 
-* This is a real analysis exercise on the Newest Social Media Dataset in Pixstory platform. Our group added 7 types of features to this dataset: sports events, festival lists, hate tags, sarcasm flags, country boundaries, billboard top songs, and movie ranks. We use Tika conduct the similarity analyses and visualize the results.	
+This is a real analysis exercise on the Newest Social Media Dataset in Pixstory platform. Our group added 7 types of features to this dataset: sports events, festival lists, hate tags, sarcasm flags, country boundaries, billboard top songs, and movie ranks. We use Tika conduct the similarity analyses and visualize the results.	
 
 # Installation
 Please use requirements.txt to install and import required packages.
@@ -10,21 +10,14 @@ Please use requirements.txt to install and import required packages.
 $ pip install -r requirements.txt
 ```
 
-# Dependencies & Running Code
-
-How to Run Code:
-> The main program is designed based on Python3.9. For scripts requires different working enviornment will mention in the section. 
-
-
 # Data 
 
 ### Pixstory Data
+How to Run Code:
+* The main data aggregation scritp is designed based on Python3.9.
+* The final tsv dataset can get by running the `Team6_DataAggregation` Notebook through `Cell -- Run All`
 
 #### Joining Required Fearures
-
-How to Run Code:
-> The main data aggregation scritp is designed based on Python3.9. For scripts requires different working enviornment will mention in the section. 
-> The final tsv dataset can get by running the 'Team6_DataAggregation' Notebook through 'Cell -- Run All'
 
 >1. Sport Events
 Parsed from the link [TopendSports](https://www.topendsports.com/events/games/list.htm) and then use re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
@@ -39,29 +32,28 @@ Add a flag for hate speech detected from [Glaad](https://www.glaad.org/hate-spee
 Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and define the function clean_text to standardized the flag. Then count vectorizer and assign the flags based on title, narrative and text.
 
 
-## Addtional Dataset from Different MIME Top-Level [Data Aggregation]
-3 MIME Top-Level are appliaction/zipped-shapefile, text/html and image/jpeg. 
+#### Addtional Dataset from Different MIME Top-Level 
+
+* 3 MIME Top-Level: `appliaction/zipped-shapefile`, `text/html` and `image/jpeg` 
 
 >1. Shapefile -- Esri Worldwise country boundry 
-External shapefiles datasets is provided in the data folder. Make sure you have all necessary files (not just shp!) and Running under Python 3.8+ version. fiona is an dependency from geopandas. If it can not installed properly with geopandas, please install it. manunally. By assign country for post that mentioned country in the title or narrative. 3 new features are : Country, Continent, and geometry (georeference) 
+> * External shapefiles datasets is provided in the data folder. Make sure you have all necessary files (not just shp!) and Running under Python 3.8+ version. fiona is an dependency from geopandas. If it can not installed properly with geopandas, please install it. manunally. By assign country for post that mentioned country in the title or narrative. 3 new features are : Country, Continent, and geometry (georeference) 
 
 >2. HTML -- BillBoard 100 Year Top Music for 2020, 2021, and 2022
-Use beautifulsoup to parse [Official Biilboard Award List](https://www.billboard.com/charts/year-end/hot-100-songs/) and store them as lists. Match the dataset narrative column to see whether they mention the song to add new features. 4 new features are : song title, singer, rank, and the rank year
+> * Use beautifulsoup to parse [Official Biilboard Award List](https://www.billboard.com/charts/year-end/hot-100-songs/) and store them as lists. Match the dataset narrative column to see whether they mention the song to add new features. 4 new features are : song title, singer, rank, and the rank year
 
 >3. Image --  Boxoffice for 2020, 2021, and 2022
-Picking up the top most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files and converted into CSV file for analysis. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 4 new features are : movie title, movie rank, rank year, movie release date 
+> * Picking up the top most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files and converted into CSV file for analysis. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 4 new features are : movie title, movie rank, rank year, movie release date 
 
 # Assignment : Tika Similarity Test and Clustering 
 
-1. Tika Similarity Test
+### Tika Similarity Test
 
->a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
+##### 1. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
+You can get data_json folder that contains all json files by running `team6_tsv_to_json` through `Cell -- Run All`
 
-> You can get data_json folder that contains all json files by running 'team6_tsv_to_json' through 'Cell -- Run All'
-
->b. Compare Jaccard similarity, edit-distance, and cosine similarity
-
-> If you want to compute each similarity test, you should refer to the code below.
+##### 2. Compare Jaccard similarity, edit-distance, and cosine similarity
+If you want to compute each similarity test, you should refer to the code below.
 
 > * Jaccard similarity
 ``` 
@@ -76,8 +68,7 @@ $ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/ou
 $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
 ```
 
->c. Compare and contrast clusters from each test
-
+##### 3. Compare and contrast clusters from each test
 We generated d3 cluster, d3 circle, and d3 level clusters. If you want to run the code, refer to the code below. 
 
 > * Generate d3 clusters
@@ -95,9 +86,8 @@ $ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarit
 $ python generateLevelCluster.py
 ```
 
->d. Add some new D3.js visualizations to Tika Similarity
-> Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap. We are added the result
-> and code file with in our submitted file. 
+##### 5. Add some new D3.js visualizations to Tika Similarity
+Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap. We are added the result and code file with in our submitted file. 
 
 # About
 This is the assignment 1 from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
