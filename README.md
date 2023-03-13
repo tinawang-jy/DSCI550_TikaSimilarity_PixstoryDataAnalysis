@@ -121,7 +121,7 @@ $ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/ou
 $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
 ```
 
->c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
+>c. Compare and contrast clusters from each test
 
 We generated d3 cluster, d3 circle, and d3 level clusters. If you want to run the code, refer to the code below. 
 
