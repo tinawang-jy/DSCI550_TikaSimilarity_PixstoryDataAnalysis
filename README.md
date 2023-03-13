@@ -51,7 +51,7 @@ How to Run Code:
 ### Pixstory Data
 
 #### Joining Required Fearures
-Please run all cells in the jupyter notebook
+Please run all cells in the 
 
 >1. Sport Events
 parse from the link https://www.topendsports.com/events/games/list.htm and then use re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
@@ -80,16 +80,16 @@ Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/ho
 Picking up the top 20 most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 3 new features are : rank, year, release 
 
 # Assignment1 : Tika Similarity Test and Clustering 
->1. Data Aggregation : convert dataframe to tsv file
+1. Data Aggregation : convert dataframe to tsv file
 ```
 $ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 ```
 >Explanation : 
 >Once all of our external data had been added to our table, we had to combine all of our work. This was done with commands being run to combine our csv files into a single .tsv.
 
->2. Tika Similarity Test
+2. Tika Similarity Test
 
->a. Convert the TSV dataset into JSON
+>a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
 
 ```
 $ filename = 'Team6_DSCI550_HW_BIGDATA_0312.tsv'
@@ -105,51 +105,30 @@ $    df.iloc[i].to_json(f'data/{i}.json')
 > reads in a Pandas DataFrame called df, drops any rows that contain only NaN values using the dropna() method, and then saves each row of the resulting DataFrame as a separate JSON file in a new folder called data.
 
 >b. Compare Jaccard similarity, edit-distance, and cosine similarity
+
+If you want to compute Jaccard similarity, you should run the code below.
+
 > Jaccard similarity
-If you want to compute Jaccard similarity, you should write the code below.
-
 ``` 
-$ python jaccard_similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv
+$ 
 ```
-If you want to compute edit-distance, you should write the code below.
-
 > edit-distance
 ```
 $ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv --accept png pdf gif
 ```
-If you want to compute Cosine similarity, you should write the code below
+> Cosine similarity
 ```
 $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
 ```
 
 >c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
 
-Generate d3 clusters
-```
-$ python edit-cosine-cluster.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
-```
 
-Generate d3 circle
-```
-$ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
-```
+3. Package data up by combining all of your new JSONs with additional features into a single TSV
 
-Generate d3 LevelClusters
-```
-$ python generateLevelCluster.py
-```
->3. Package data up by combining all of your new JSONs with additional features into a single TSV
 
 # Assignment2 : Add some new D3.js visualizations to Tika Similarity
+Add some new D3.js visualizations to Tika Similarity. Our team made circlepack, treemap, 
 ```
 $ python processing.py
 ```
-
-# Contribution
-> Our team has six members, and each contribution is as follows.
-> Andrew Bruneel :
-> Arya Sun :
-> Bongjun Kim : 
-> Jiayin Wang :
-> Jingyi Wang :
-> Tongxin Ye : 
