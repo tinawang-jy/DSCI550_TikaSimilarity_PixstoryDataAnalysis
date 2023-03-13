@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is a real analysis exercise on the Newest Social Media Dataset in Pixstory platform. Our group added 7 types of features to this dataset: sports events, festival lists, hate tags, sarcasm flags, country boundaries, billboard top songs, and movie ranks. We use Tika conduct the similarity analyses and visualize the results.	
+This is a real analysis exercise on the Newest Social Media Dataset in Pixstory platform. Our group, `team 6`,  added 7 types of features to this dataset: sports events, festival lists, hate tags, sarcasm flags, country boundaries, billboard top songs, and movie ranks. We use Tika conduct the similarity analyses and visualize the results.	
 
 # Installation
 Please use requirements.txt to install and import required packages.
