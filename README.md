@@ -104,16 +104,36 @@ $    df.iloc[i].to_json(f'data/{i}.json')
 > Explanation : 
 > reads in a Pandas DataFrame called df, drops any rows that contain only NaN values using the dropna() method, and then saves each row of the resulting DataFrame as a separate JSON file in a new folder called data.
 
-b. Compare Jaccard similarity, edit-distance, and cosine similarity
+>b. Compare Jaccard similarity, edit-distance, and cosine similarity
+> Jaccard similarity
+If you want to compute Jaccard similarity, you should write the code below.
 
-c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
+``` 
+$ 
+```
+If you want to compute edit-distance, you should write the code below.
+
+> edit-distance
+```
+$ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv --accept png pdf gif
+```
+If you want to compute Cosine similarity, you should write the code below
+```
+$ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
+```
+
+>c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
+
 
 >3. Package data up by combining all of your new JSONs with additional features into a single TSV
 
 # Assignment2 : Add some new D3.js visualizations to Tika Similarity
+```
+$ python processing.py
+```
 
 # Contribution
-Our team has six members, and each contribution is as follows.
+> Our team has six members, and each contribution is as follows.
 > Andrew Bruneel :
 > Arya Sun :
 > Bongjun Kim : 
