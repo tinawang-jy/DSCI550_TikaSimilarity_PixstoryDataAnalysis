@@ -88,6 +88,7 @@ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 >Once all of our external data had been added to our table, we had to combine all of our work. This was done with commands being run to combine our csv files into a single .tsv.
 
 >2. Tika Similarity Test
+
 >a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
 
 '''
