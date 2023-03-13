@@ -84,7 +84,7 @@ Picking up the top 20 most popular box office movies data in the U.S. between 20
 ```
 $ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 ```
->Explanation
+>Explanation : 
 >Once all of our external data had been added to our table, we had to combine all of our work. This was done with commands being run to combine our csv files into a single .tsv.
 
 >2. Tika Similarity Test
@@ -101,7 +101,7 @@ $ for i in range(len(df_without_nan)):
 $    df.iloc[i].to_json(f'data/{i}.json')
 ```
 
-> Explanation
+> Explanation : 
 > reads in a Pandas DataFrame called df, drops any rows that contain only NaN values using the dropna() method, and then saves each row of the resulting DataFrame as a separate JSON file in a new folder called data.
 
 b. Compare Jaccard similarity, edit-distance, and cosine similarity
