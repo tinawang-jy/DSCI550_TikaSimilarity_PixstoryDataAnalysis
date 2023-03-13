@@ -91,7 +91,7 @@ $ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 
 >a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
 
-'''''''''''''''''''''''''''''''''''''''''''''''''
+```
 $ filename = 'Team6_DSCI550_HW_BIGDATA_0312.tsv'
 $ df = pd.read_csv(filename, delimiter='\t')
 $ df_without_nan = df.dropna(how='all')
@@ -99,7 +99,7 @@ $ if not os.path.exists('data'):
 $    os.makedirs('data')
 $ for i in range(len(df_without_nan)):
 $    df.iloc[i].to_json(f'data/{i}.json')
-''''''''''''''''''''''''''''''''''''''''''''''''
+```
 
 > Explanation
 > reads in a Pandas DataFrame called df, drops any rows that contain only NaN values using the dropna() method, and then saves each row of the resulting DataFrame as a separate JSON file in a new folder called data.
