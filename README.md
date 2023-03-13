@@ -140,7 +140,7 @@ Generate d3 LevelClusters
 $ python generateLevelCluster.py
 ```
 
-d. Add some new D3.js visualizations to Tika Similarity
+>d. Add some new D3.js visualizations to Tika Similarity
 > Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap. We are added the result
 > and code file with in our submitted file. 
 
