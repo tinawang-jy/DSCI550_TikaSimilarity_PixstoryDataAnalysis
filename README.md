@@ -123,7 +123,7 @@ $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept
 
 >c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
 
-We generated d3 circle, 
+We generated d3 cluster, d3 circle, and d3 level clusters. If you want to run the code, refer to the code below. 
 
 Generate d3 clusters
 ```
@@ -141,7 +141,8 @@ $ python generateLevelCluster.py
 ```
 
 d. Add some new D3.js visualizations to Tika Similarity
-> Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap 
+> Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap. We are added the result
+> and code file with in our submitted file. 
 
 # About
 This is the assignment 1 from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
