@@ -1,6 +1,4 @@
 # DSCI550_TikaSimilarity_PixstoryDataAnalysis
-This repository is designed as a collaborate workspace for DSCI550_SP23_team6. 
-Thanks for the instruction from Professor Chris Mattmann and TA Suchith Prathapaneni.
 
 # Introduction
 
