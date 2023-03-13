@@ -79,7 +79,7 @@ Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/ho
 >3. Image --  TOP 20 boxoffice for 2020, 2021, and 2022
 Picking up the top 20 most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 3 new features are : rank, year, release 
 
-# Assignment1 : Tika Similarity Test and Clustering 
+# Assignment : Tika Similarity Test and Clustering 
 1. Data Aggregation : convert dataframe to tsv file
 ```
 $ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
@@ -130,10 +130,11 @@ $ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarit
 ```
 Generate d3 LevelClusters
 ```
+```
 $ python generateLevelCluster.py
 ```
 
-# Assignment2 : Add some new D3.js visualizations to Tika Similarity
+d. Add some new D3.js visualizations to Tika Similarity
 Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap 
 
 # About
