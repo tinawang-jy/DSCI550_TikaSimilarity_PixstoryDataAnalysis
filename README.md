@@ -77,7 +77,7 @@ External shapefiles datasets are in path "data/6-1_World_Countries/World_Countri
 Use beautifulsoup to parse the link https://www.billboard.com/charts/year-end/hot-100-songs/ then store into list. Match the dataset narrative column to see whether they mention the song to add new features. 3 new features are : song title, singer, rank
 
 >3. Image --  TOP 20 boxoffice for 2020, 2021, and 2022
-Picking up the top 20 most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 3 new features are : rank, year, release 
+Picking up the top most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 3 new features are : rank, year, release 
 
 # Assignment : Tika Similarity Test and Clustering 
 1. Data Aggregation : convert dataframe to tsv file
