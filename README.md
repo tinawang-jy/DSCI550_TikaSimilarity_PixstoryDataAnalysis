@@ -106,7 +106,7 @@ $    df.iloc[i].to_json(f'data/{i}.json')
 
 >b. Compare Jaccard similarity, edit-distance, and cosine similarity
 
-If you want to compute Jaccard similarity, you should run the code below.
+>> If you want to compute each similarity test, you should refer to the code below.
 
 > Jaccard similarity
 ``` 
