@@ -106,15 +106,15 @@ $    df.iloc[i].to_json(f'data/{i}.json')
 
 > If you want to compute each similarity test, you should refer to the code below.
 
-> Jaccard similarity
+> * Jaccard similarity
 ``` 
 $ python jaccard_similarity.py --inputDir /path/to/files —outCSV /path/to/output.csv
 ```
-> edit-distance
+> * edit-distance
 ```
 $ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv --accept png pdf gif
 ```
-> Cosine similarity
+> * Cosine similarity
 ```
 $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
 ```
@@ -123,17 +123,17 @@ $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept
 
 We generated d3 cluster, d3 circle, and d3 level clusters. If you want to run the code, refer to the code below. 
 
-Generate d3 clusters
+> * Generate d3 clusters
 ```
 $ python edit-cosine-cluster.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
 ```
 
-Generate d3 circle
+> * Generate d3 circle
 ```
 $ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
 ```
 
-Generate d3 LevelClusters
+> * Generate d3 LevelClusters
 ```
 $ python generateLevelCluster.py
 ```
