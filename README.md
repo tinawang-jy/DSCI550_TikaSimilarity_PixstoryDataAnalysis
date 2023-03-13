@@ -10,7 +10,7 @@ This is a real analysis exercise on the Newest Social Media Dataset in Pixstory 
 # Installation
 Please use requirements.txt to install and import required packages.
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 # Dependencies & Running Code
@@ -82,7 +82,7 @@ Picking up the top 20 most popular box office movies data in the U.S. between 20
 # Assignment1 : Tika Similarity Test and Clustering 
 >1. Data Aggregation : convert dataframe to tsv file
 ```
-pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
+$ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 ```
 >Explanation
 >Once all of our external data had been added to our table, we had to combine all of our work. This was done with commands being run to combine our csv files into a single .tsv.
@@ -92,13 +92,13 @@ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 >a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
 
 '''
-filename = 'Team6_DSCI550_HW_BIGDATA_0312.tsv'
-df = pd.read_csv(filename, delimiter='\t')
-df_without_nan = df.dropna(how='all')
-if not os.path.exists('data'):
-    os.makedirs('data')
-for i in range(len(df_without_nan)):
-    df.iloc[i].to_json(f'data/{i}.json')
+$ filename = 'Team6_DSCI550_HW_BIGDATA_0312.tsv'
+$ df = pd.read_csv(filename, delimiter='\t')
+$ df_without_nan = df.dropna(how='all')
+$ if not os.path.exists('data'):
+$    os.makedirs('data')
+$ for i in range(len(df_without_nan)):
+$    df.iloc[i].to_json(f'data/{i}.json')
 '''
 
 > Explanation
