@@ -141,7 +141,7 @@ $ python generateLevelCluster.py
 ```
 
 d. Add some new D3.js visualizations to Tika Similarity
-Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap 
+> Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap 
 
 # About
 This is the assignment 1 from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
