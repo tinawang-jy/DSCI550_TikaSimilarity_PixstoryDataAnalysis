@@ -36,7 +36,7 @@ Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and defin
 
 * 3 MIME Top-Level: `appliaction/zipped-shapefile`, `text/html` and `image/jpeg` 
 
->1. Shapefile -- Esri Worldwise country boundry 
+>1. Shapefile -- Esri Worldwide Country Boundary 
 > * External shapefiles datasets is provided in the data folder. Make sure you have all necessary files (not just shp!) and Running under Python 3.8+ version. fiona is an dependency from geopandas. If it can not installed properly with geopandas, please install it. manunally. By assign country for post that mentioned country in the title or narrative. 3 new features are : Country, Continent, and geometry (georeference) 
 
 >2. HTML -- BillBoard 100 Year Top Music for 2020, 2021, and 2022
