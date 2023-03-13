@@ -123,13 +123,19 @@ $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept
 
 >c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
 
+We generated d3 circle, 
+
+Generate d3 clusters
+```
+$ python edit-cosine-cluster.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
+```
+
 Generate d3 circle
 ```
 $ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
 ```
-```
+
 Generate d3 LevelClusters
-```
 ```
 $ python generateLevelCluster.py
 ```
