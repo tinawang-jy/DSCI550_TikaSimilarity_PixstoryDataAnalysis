@@ -51,7 +51,7 @@ How to Run Code:
 ### Pixstory Data
 
 #### Joining Required Fearures
-Please run all cells in the 
+Please run all cells in the jupyter notebook
 
 >1. Sport Events
 parse from the link https://www.topendsports.com/events/games/list.htm and then use re.package to standardized the date of the sport events, use date.time to match the 4 different types of the date of the sport events with the Account Created Date. 
@@ -89,7 +89,7 @@ $ pix_df.to_csv('Team6_DSCI550_HW_BIGDATA_0312.tsv', sep='\t', index=False)
 
 >2. Tika Similarity Test
 
->a. Convert the TSV dataset into JSON using Tika Similarity’s tsv2json tool
+>a. Convert the TSV dataset into JSON
 
 ```
 $ filename = 'Team6_DSCI550_HW_BIGDATA_0312.tsv'
@@ -105,29 +105,51 @@ $    df.iloc[i].to_json(f'data/{i}.json')
 > reads in a Pandas DataFrame called df, drops any rows that contain only NaN values using the dropna() method, and then saves each row of the resulting DataFrame as a separate JSON file in a new folder called data.
 
 >b. Compare Jaccard similarity, edit-distance, and cosine similarity
-
-If you want to compute Jaccard similarity, you should run the code below.
-
 > Jaccard similarity
+If you want to compute Jaccard similarity, you should write the code below.
+
 ``` 
-$ 
+$ python jaccard_similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv
 ```
+If you want to compute edit-distance, you should write the code below.
+
 > edit-distance
 ```
 $ python edit-value-similarity.py --inputDir /path/to/files --outCSV /path/to/output.csv --accept png pdf gif
 ```
-> Cosine similarity
+If you want to compute Cosine similarity, you should write the code below
 ```
 $ python cosine_similarity.py [-h] --inputDir INPUTDIR --outCSV OUTCSV [--accept [png pdf etc...]]
 ```
 
 >c. Compare and contrast clusters from Jaccard, Cosine Distance, and Edit Similarity
 
+Generate d3 clusters
+```
+$ python edit-cosine-cluster.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
+```
 
+Generate d3 circle
+```
+$ python edit-cosine-circle-packing.py --inputCSV /edit/cosine/jaccard/similarity/scores.csv  --cluster 2
+```
+
+Generate d3 LevelClusters
+```
+$ python generateLevelCluster.py
+```
 >3. Package data up by combining all of your new JSONs with additional features into a single TSV
-
 
 # Assignment2 : Add some new D3.js visualizations to Tika Similarity
 ```
 $ python processing.py
 ```
+
+# Contribution
+> Our team has six members, and each contribution is as follows.
+> Andrew Bruneel :
+> Arya Sun :
+> Bongjun Kim : 
+> Jiayin Wang :
+> Jingyi Wang :
+> Tongxin Ye : 
