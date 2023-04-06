@@ -104,7 +104,11 @@ $ pip install -r requirements.txt
 
 ## Text Analysis
 
-
+### 1. Language Detection using Google's LangDetect and Tika Language Detection
+|Language Detection| Google's LangDetect  | Tika Language Detection |
+|------------------| ------------- | ------------- |
+|Number of Languages Detected| 31 | 53  |
+| Top2 Languages  | English, Italian  | English, Italian |
 
 ### 2. Language Translation using RTG (Reader Translator Generator)
 The command lines to start Tika servers are below.
