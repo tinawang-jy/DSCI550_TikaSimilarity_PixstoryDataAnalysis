@@ -104,13 +104,9 @@ $ pip install -r requirements.txt
 
 ## Text Analysis
 
-### 1. Language Detection using Google's LangDetect and Tika Language Detection
-Google LangDetect discovered 31 languages, with English being the most common (65,505 rows) and Italian coming in second (10,219 rows). Latvian (72 rows) and Hungarian were the least popular languages (61 rows).
-Tika Language Detection, on the other hand, discovered 53 languages, with English being the most common (65,226 rows) and Italian being the second most common (9,284 rows). Tika Language Detection recognized just one entry for Ukrainian and one row for Punjabi, making them the least popular languages in the sample.
-It is important to note that the results of language detection might differ based on the dataset and the language detection method utilized. Also, for this Pixtory dataset, Tika Language Detection truly recognizes more languages than Google LangDetect.
+
 
 ### 2. Language Translation using RTG (Reader Translator Generator)
-<br>
 The command lines to start Tika servers are below.
 ```
 $ IMAGE=tgowda/rtg-model:500toEng-v1
@@ -118,6 +114,7 @@ $ docker run --rm -i -p 6060:6060 $IMAGE
 $ docker pull apache/tika
 $ docker run -d -p 9998:9998 apache/tika:latest
 ```
+
 ### 3. Geo-parsing using GeoTopicParser
 
 ### 4. Toxicity Detection using Detoxify
