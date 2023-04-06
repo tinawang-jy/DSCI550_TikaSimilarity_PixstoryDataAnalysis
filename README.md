@@ -45,7 +45,7 @@ Use 'data/GEN-sarc-notsarc.xlsx' to get the columns of the scarc flags and defin
 >3. Image --  Boxoffice for 2020, 2021, and 2022
 > * Picking up the top most popular box office movies data in the U.S. between 2020 and 2022 of each year. These data are made from image files and converted into CSV file for analysis. Match the data if "movie title" is included in Pixstory data's "Title" or "Narrative". 4 new features are : movie title, movie rank, rank year, movie release date 
 
-# Assignment : Tika Similarity Test and Clustering 
+# Assignment1 : Tika Similarity Test and Clustering 
 
 ### Tika Similarity Test
 
@@ -89,7 +89,35 @@ $ python generateLevelCluster.py
 ##### 5. Add some new D3.js visualizations to Tika Similarity
 Add some new D3.js visualizations to Tika Similarity. Our team made circle packing, treemap, plot, bracemap. We are added the result and code file with in our submitted file. 
 
+# Assignment2 : Content Analysis on manipulated Pixstory datasets based on Assignment1
+
+## Introduction
+
+This project leverages the richness in the Pixstory dataset by exploring the posts (text) and images (jpg). The content analysis can be devided into two parts. The first part follows the workflows of language identification, language translation, Geo-parsing and toxicity detection. The second part focuses on Image Captioning and Object Recognition.
+
+## Dependencies
+A Docker is needed to call Tika servers.
+Please use requirements.txt to install and import required packages.
+```
+$ pip install -r requirements.txt
+```
+
+## Text Analysis
+
+### 1. Language Detection using Google's LangDetect
+
+### 2. Language Translation using RTG (Reader Translator Generator)
+
+### 3. Geo-parsing using GeoTopicParser
+
+### 4. Toxicity Detection using Detoxify
+
+## Image Analysis
+
+### 1.  Image Captioning and Object Recognition using Tika Image Dockers
+
+
 # About
-This is the assignment 1 from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
+This is the assignments from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
 
 Team members: Andrew Bruneel, Arya Sun, Bongjun Kim, Jiayin Wang, Jingyi Wang, Tongxin Ye
