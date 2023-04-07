@@ -111,6 +111,7 @@ $ pip install -r requirements.txt
 |------------------| ------------- | ------------- |
 |Number of Languages Detected| 31 | 53  |
 | Top2 Languages  | English, Italian  | English, Italian |
+
 In brief, the results of language detection differ based on the dataset and the language detection method utilized. For this Pixtory dataset, Tika Language Detection recognizes more languages than Google LangDetect.
 
 ### 2. Language Translation using RTG (Reader Translator Generator)
@@ -127,10 +128,19 @@ $ docker run -d -p 9998:9998 apache/tika:latest
 
 ### 4. Toxicity Detection using Detoxify
 
+A set of open-source models from Detoxify library is utilized to detect and evaluate the level of toxicity in posts in 7 aspects: toxicity, severe_toxicity, obscene, identity_attack, insult, threat, and sexual_explicit. Based on the average toxicity scores and corresponding standard deviations of the pixtory dataset, we can conclude that pixtory lives up to its claim of being a clean social media with about 75% of its narratives getting scores under 0.01 in terms of all kinds of toxic expressions.
+
+![image](https://user-images.githubusercontent.com/111823275/230514951-509aaa50-651a-48ff-9b63-21aedc01b1ca.png)
+
 ## Image Analysis
 
-### 1.  Image Captioning and Object Recognition using Tika Image Dockers
+### 1.  Image Captioning using Tika Image Dockers
 
+Overall, the model was precise in generating captions and ran fairly quickly on the images in the dataset. The inaccuracies that are seen with the generated captions are likely due to the wide variety of images within the Pixstory dataset, and the limited vocabulary of the image captioning model to be able to cover the entire breadth of these images. 
+
+### 2. Object Recognition using Tika Image Dockers
+
+The detected objects were very off-base at times from what the actual pictured objects, but under some conditions there exists consistency between the detected object and automatically-generated caption. The identified objects are not usually described in the caption, but sometimes there was overlap and both models performed very well. 
 
 # About
 This is the assignments from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
