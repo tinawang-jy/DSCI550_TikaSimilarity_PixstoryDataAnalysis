@@ -125,6 +125,18 @@ $ docker run -d -p 9998:9998 apache/tika:latest
 ```
 
 ### 3. Geo-parsing using GeoTopicParser
+Open a terminal and cd to folder 'research' containing geoparsers.
+```
+$ cd research
+$ cd lucene-geo-gazetter
+$ lucene-geo-gazetter -server
+$ geotopic -server
+```
+Open a new terminal tab
+```
+$ cd ..
+$ ./geotopic-server
+```
 
 ### 4. Toxicity Detection using Detoxify
 
