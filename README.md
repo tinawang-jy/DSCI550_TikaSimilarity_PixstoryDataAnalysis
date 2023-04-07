@@ -160,8 +160,8 @@ This way, rtg service can be used on 3080. The translation speed is tested to be
 ```
 $ cd research
 $ cd lucene-geo-gazetter
+$ export PATH=$PWD/src/main/bin:$PATH
 $ lucene-geo-gazetter -server
-$ geotopic -server
 ```
 Open a new terminal tab
 ```
