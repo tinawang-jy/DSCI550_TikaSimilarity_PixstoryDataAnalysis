@@ -134,7 +134,7 @@ $ docker run --gpus '"device=0"' --rm -i -p 6060:6060 $IMAGE
 * 3. To solve this problem, first enter the container launched in step 1), and then upgrade torch as follows:
 Open a terminal and cd to folder 'research' containing geoparsers.
 
-![()]
+![3080](https://github.com/Tilalala/DSCI550_TikaSimilarity_PixstoryDataAnalysis/blob/main/3080.png)
 
 * 4. After the upgrade is complete, save it as a new image from the container, as follows:
 `docker commit d5944567401a tree/ v0.7.2-600toEng-v2.0-3080`
