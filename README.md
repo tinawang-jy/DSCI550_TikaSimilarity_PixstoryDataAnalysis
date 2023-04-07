@@ -93,7 +93,7 @@ Add some new D3.js visualizations to Tika Similarity. Our team made circle packi
 
 ## Introduction
 
-This project leverages the richness in the Pixstory dataset by exploring the posts (text) and images (jpg). The content analysis can be devided into two parts. The first part follows the workflows of language identification, language translation, Geo-parsing and toxicity detection. The second part focuses on Image Captioning and Object Recognition.
+This project leverages the richness in the Pixstory dataset by exploring the posts (text) and images (jpeg&png). The content analysis can be devided into two parts. The first part follows the workflows of language identification, language translation, Geo-parsing and toxicity detection. The second part focuses on Image Captioning and Object Recognition.
 
 ## Dependencies
 
@@ -109,7 +109,7 @@ $ pip install -r requirements.txt
 
 |Language Detection| Google's LangDetect  | Tika Language Detection |
 |------------------| ------------- | ------------- |
-|Number of Languages Detected| 31 | 53  |
+|Number of Languages Detected| 30 | 53  |
 | Top2 Languages  | English, Italian  | English, Italian |
 
 In brief, the results of language detection differ based on the dataset and the language detection method utilized. For this Pixtory dataset, Tika Language Detection recognizes more languages than Google LangDetect.
