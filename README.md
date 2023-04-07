@@ -123,9 +123,40 @@ $ docker run --rm -i -p 6060:6060 $IMAGE
 $ docker pull apache/tika
 $ docker run -d -p 9998:9998 apache/tika:latest
 ```
+#### Use GPU3080 to accelerate translation speed
+* 1. When deploying the rtg translation package using docker, pull the latest image v0.7.2-600toEng-v2.0, and deploy the service using the following command:
+```
+$ IMAGE=tgowda/ v0.7.2-600toEng-v2.0
+$ docker run --gpus '"device=0"' --rm -i -p 6060:6060 $IMAGE
+```
+* 2. When requesting using `http://localhost:6060` or `http://localhost:6060/translate`, an error occurred. After troubleshooting, it was found that the current version of PyTorch in the image is not compatible with the graphics card version. The error message is as follows:
+`GeForce RTX 3080 with CUDA capability sm_86 is not compatible with the current PyTorch installation. The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 compute_37.`
+* 3. To solve this problem, first enter the container launched in step 1), and then upgrade torch as follows:
+Open a terminal and cd to folder 'research' containing geoparsers.
+
+![()]
+
+* 4. After the upgrade is complete, save it as a new image from the container, as follows:
+`docker commit d5944567401a tree/ v0.7.2-600toEng-v2.0-3080`
+* 5. Then, redeploy the rtg service on the new image:
+`IMAGE= tree/ v0.7.2-600toEng-v2.0-3080`
+`docker run --gpus '"device=0"' --rm -i -p 6060:6060 $IMAGE`
+This way, rtg service can be used on 3080. The translation speed is tested to be about 3-4 times faster than using CPU.
+#### Use multithreading to speed up translation
+
+* Using multithreading in Python is relatively simple, as follows:
+`thread.start_new_thread ( function, args[, kwargs] )`
+
+* Parameter explanation:
+>1. function - the thread function
+>2. args - the arguments passed to the thread function, which must be a tuple
+>3. kwargs - optional parameters
+
+* Using multithreading can start multiple translation tasks at the same time, and synchronize the processing of translated text in blocks. It is only necessary to ensure that each thread writes data to different documents separately when writing, in order to ensure thread safety.
+
+* Tests using this method showed that the translation speed is comparable to that of single-threaded processing. The reason for this is that the current bottleneck in translation speed is the model processing speed (CPU or GPU) rather than the limit of request concurrency. Therefore, the acceleration effect is not significant.
 
 ### 3. Geo-parsing using GeoTopicParser
-Open a terminal and cd to folder 'research' containing geoparsers.
 ```
 $ cd research
 $ cd lucene-geo-gazetter
@@ -137,7 +168,8 @@ Open a new terminal tab
 $ cd ..
 $ ./geotopic-server
 ```
-'Geographical Information' column saved null geoparsing result to 'Null' in string format.
+`Geographical Information' column saved null geoparsing result to 'Null' in string format.`
+
 
 ### 4. Toxicity Detection using Detoxify
 
