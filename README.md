@@ -137,6 +137,7 @@ Open a new terminal tab
 $ cd ..
 $ ./geotopic-server
 ```
+'Geographical Information' column saved null geoparsing result to 'Null' in string format.
 
 ### 4. Toxicity Detection using Detoxify
 
