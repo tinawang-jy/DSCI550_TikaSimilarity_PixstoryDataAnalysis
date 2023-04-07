@@ -136,6 +136,18 @@ A set of open-source models from Detoxify library is utilized to detect and eval
 
 ### 1.  Image Captioning using Tika Image Dockers
 
+Do not build the docker environment, instead automatically pull it by running:
+
+```
+$ docker run -it -p 8764:8764 uscdatascience/inception-rest-tika
+```
+
+Then delete all containers and images on your docker environment (to ensure it pulls the necessary environment)
+
+```
+$ docker run -it -p 8764:8764 uscdatascience/im2txt-rest-tika
+```
+
 Overall, the model was precise in generating captions and ran fairly quickly on the images in the dataset. The inaccuracies that are seen with the generated captions are likely due to the wide variety of images within the Pixstory dataset, and the limited vocabulary of the image captioning model to be able to cover the entire breadth of these images. 
 
 ### 2. Object Recognition using Tika Image Dockers
