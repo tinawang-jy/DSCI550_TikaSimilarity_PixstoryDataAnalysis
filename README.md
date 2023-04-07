@@ -106,13 +106,14 @@ $ pip install -r requirements.txt
 ## Text Analysis
 
 ### 1. Language Detection using Google's LangDetect and Tika Language Detection
+How to Run Code:
+* The language identification Notebook script is designed based on Python3.9, all results can be compiled through `Cell -- Run All`
 
 |Language Detection| Google's LangDetect  | Tika Language Detection |
 |------------------| ------------- | ------------- |
 |Number of Languages Detected| 30 | 53  |
 | Top2 Languages  | English, Italian  | English, Italian |
 
-In brief, the results of language detection differ based on the dataset and the language detection method utilized. For this Pixtory dataset, Tika Language Detection recognizes more languages than Google LangDetect.
 
 ### 2. Language Translation using RTG (Reader Translator Generator)
 
