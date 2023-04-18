@@ -220,12 +220,13 @@ $ cd /geodata
 $ ./create-core.sh
 $ ./add-fields.sh
 ```
-loadgeodata.ipynb Run all
+
+* loadgeodata.ipynb Run all
 
 * Display in local server
-** Open http://localhost:8000 in browser.
-** Set indexed engine path 'http://localhost:8983/solr/geodata/' and add index.
-** Click on 'Geoparse', wait for a while then click 'View'.
+1. Open http://localhost:8000 in browser.
+2. Set indexed engine path 'http://localhost:8983/solr/geodata/' and add index.
+3. Click on 'Geoparse', wait for a while then click 'View'.
 
 # About
 This is the assignments from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
