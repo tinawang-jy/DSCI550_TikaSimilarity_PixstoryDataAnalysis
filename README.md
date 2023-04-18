@@ -200,6 +200,33 @@ $ docker run -it -p 8764:8764 uscdatascience/inception-rest-tika
 
 The detected objects were very off-base at times from what the actual pictured objects, but under some conditions there exists consistency between the detected object and automatically-generated caption. The identified objects are not usually described in the caption, but sometimes there was overlap and both models performed very well. 
 
+# Assignment3 : Data visualization on multimodal Pixstory dataset
+
+## Task 6. MEMEX GeoParser
+
+* The command lines to pull MEMEX GeoParser are below.
+```
+$ git clone https://github.com/nasa-jpl-memex/GeoParser.git
+$ cd /Users/mac/Documents/GitHub/GeoParser/Docker
+$ docker pull nasajplmemex/geo-parser
+$ docker-compose up -d
+$ 
+```
+
+* The command lines to upload data to MEMEX GeoParser are below.
+Assuming that you have checked out GeoParser to $geodata, then:
+```
+$ cd /geodata
+$ ./create-core.sh
+$ ./add-fields.sh
+```
+loadgeodata.ipynb Run all
+
+* Display in local server
+** Open http://localhost:8000 in browser.
+** Set indexed engine path 'http://localhost:8983/solr/geodata/' and add index.
+** Click on 'Geoparse', wait for a while then click 'View'.
+
 # About
 This is the assignments from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
 
