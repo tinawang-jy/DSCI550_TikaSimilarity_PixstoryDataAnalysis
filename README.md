@@ -202,7 +202,17 @@ The detected objects were very off-base at times from what the actual pictured o
 
 # Assignment3 : Data visualization on multimodal Pixstory dataset
 
-## Task 6. MEMEX GeoParser
+## D3.js Visualization 
+
+* Create visualization webpage throught GitHub
+
+1. Create a new Github Repository with all D3 visualization file in the root directory 
+2. Write `index.html` for webpage design and place it in the `master` directory
+3. Build up the Page deployment under repository setting: set the Page Sources to `master` directory 
+
+[Click Here](https://tinawang-jy.github.io/Pixstroy-D3-Visualization/) for the Visualization Site
+
+## MEMEX GeoParser
 
 * The command lines to pull MEMEX GeoParser are below.
 ```
@@ -210,7 +220,6 @@ $ git clone https://github.com/nasa-jpl-memex/GeoParser.git
 $ cd /Users/mac/Documents/GitHub/GeoParser/Docker
 $ docker pull nasajplmemex/geo-parser
 $ docker-compose up -d
-$ 
 ```
 
 * The command lines to upload data to MEMEX GeoParser are below.
