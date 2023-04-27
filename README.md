@@ -257,7 +257,7 @@ We have created 5 JSON files through the process of D3.js Visualization.
 
 To ingest these 5 data files into Elasticsearch, we need to perform the following steps for each of the data files:
 
-1. Download and install Elasticsearch
+>1. Download and install Elasticsearch
 
 Elasticsearch v8.7.0 can be downloaded and installed as follows
 
@@ -267,9 +267,9 @@ curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.7.0-da
 tar -xzf elasticsearch-8.7.0-darwin-x86_64.tar.gz
 cd elasticsearch-8.7.0/ 
 ```
-2. Read data from a JSON file and assign a unique ID to each document
+>2. Read data from a JSON file and assign a unique ID to each document
 
-3. Convert data to Elasticsearch bulk format and send the formatted data to Elasticsearch
+>3. Convert data to Elasticsearch bulk format and send the formatted data to Elasticsearch
 
 ```
 curl -XPOST 'http://localhost:9200/_bulk' -H 'Content-Type: application/json' -d @/path/to/bulk_data_file
