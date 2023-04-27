@@ -206,36 +206,36 @@ The detected objects were very off-base at times from what the actual pictured o
 * The command lines to call the server which can visualize our 5 ds.js html file are below.
 ```
 $ cd /Users/mac/D3js
-$ python -m http.server 800
+$ python -m http.server 8000
 ```
-* Open the browser and then lead the web to the url:
+* Open the browser and then direct to the url:
 ```
 http://localhost:8000/
 ```
 * Open our 5 visualization html files
 
->1. entertainment-calendar
+1. entertainment-calendar
 open the `calendar` folder under the `http://localhost:8000/`
 
 then open the `entertainment-calendar` folder under it, and then click on the `calendar.html`
 
->2. hazard_location_bubble
+2. hazard_location_bubble
 open the `hazard_location_bubble` folder under the `http://localhost:8000/`
 
 then click on the `hazard_location_BubbleChart.html`
 
->3. interest_age bar
+3. interest_age bar
 open the `interest_age` folder under the `http://localhost:8000/`
 
 then open the `interest_age` folder under it, and then click on the `index.html`
 
->4. language_location_count_map
+4. language_location_count_map
 
 open the `language_location_count_map` folder under the `http://localhost:8000/`
 
 then then click on the `origin_language_locationmention_map.html`
 
->5.Time_Age_Post Interactive Line
+5.Time_Age_Post Interactive Line
 
 open the `age_time_postdata` folder under the `http://localhost:8000/`
 
