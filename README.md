@@ -203,6 +203,12 @@ The detected objects were very off-base at times from what the actual pictured o
 # Assignment3 : Data visualization on multimodal Pixstory dataset
 
 ## D3.js Visualization 
+* The command lines to call the server which can visualize our 5 ds.js html file are below.
+```
+$ cd /Users/mac/d3js
+$ python -m http.server 8000
+
+```
 
 * Create visualization webpage throught GitHub
 
