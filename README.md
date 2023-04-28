@@ -268,6 +268,37 @@ cd elasticsearch-8.7.0/
 curl -XPOST 'http://localhost:9200/_bulk' -H 'Content-Type: application/json' -d @/path/to/bulk_data_file
 ```
 
+## ImageSpace
+
+ImageSpace can ingest a subset of images and create image forensics using the steps below
+
+1. First, we need to create a directory for our image subset to run ImageSpace on, and populate it with images
+
+```
+$ mkdir ../subset
+$ find . -type f -name "*" > filelist.txt
+$ shuf -n 2500 < filelist.txt | xargs -d '\n' cp --parents -t ../subset
+```
+
+2. Next, we need to pull ImageSpace from Github and configure our environment variables to begin running it
+
+```
+$ export IMAGE_SPACE=`pwd`/image_space
+$ export IMAGE_DIR=/path/to/your/images
+```
+
+3. Finally, we simply need to run the Docker commands (checking the logs of our containers to make sure each process has finished before beginning the next)
+
+```
+$ cd $IMAGE_SPACE/imagespace_smqtk && ./smqtk_services.run_images.sh --docker-network deploy_imagespace-network --images $IMAGE_DIR
+$ cd $IMAGE_SPACE/scripts/deploy && IMAGE_DIR=$IMAGE_DIR docker-compose up -d
+$ cd $IMAGE_SPACE/scripts/deploy && sh ./imagespace/enable-imagespace.sh
+```
+
+And that's it! ImageSpace should be up and running on port 8989 at url http://localhost:8989
+* Solr is also running on a separate port, where we can grab our indices for ImageCat
+* Apache OODT is running on another port as well, which can be used to monitor the second Docker commands' progress
+
 ## MEMEX GeoParser
 
 * The command lines to pull MEMEX GeoParser are below.
