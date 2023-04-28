@@ -328,4 +328,4 @@ $ ./add-fields.sh
 # About
 This is the assignments from DSCI 550 Spring 2023 at USC Viterbi School of Engineering. This research is collaborated by 6 group members
 
-Team members: Andrew Bruneel, Arya Sun, Bongjun Kim, Jiayin Wang, Jingyi Wang, Tongxin Ye
+Team members: Andrew Bruneel(Image Space), Arya Sun(D3 Visualization), Bongjun Kim), Jiayin Wang(D3 Visualization), Jingyi Wang(D3 Visualization), Tongxin Ye(MEMEX Geoparser)
